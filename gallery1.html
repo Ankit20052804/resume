@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        *{
+            font-family: 'pointer',sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        nav{
+            width: 100%;
+            height: 100px;
+            background: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            padding: 0px 50px 0px 100px;
+            
+        }
+        nav .logo{
+            left: -30px;
+            font-size: 33px;
+            color: white;
+            font-weight: 600;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+        }
+        nav ul li{
+            margin: 0 10px;
+        }
+        nav ul li a{
+            color:#fff;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding: 8px 10px;    
+        }
+        nav ul li a:hover{
+            color: #000;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        nav .menu-btn i{
+            color: #fff;
+            font-size: 40px;
+            cursor: pointer;
+            display: none;
+        }
+        #click{
+            display: none;
+        }
+    
+        .form-container{
+            max-width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            height: 650px;
+            box-shadow: 0px 30px 0px rgb(9, 1, 1);
+            margin: auto;
+            margin-top: 400px;
+            border-radius: 5px;
+           
+
+        }
+        input[type="text"],
+        input[type="Email"],
+        input[type="password"],
+        textarea{
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+            
+        }
+        input[type="submit"],
+        input[type="Reset"]{
+            width: 100%;
+            padding: 15px;
+            border-radius: 5px;
+            border: 2px solid wheat;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(0, 255, 42);
+            color: white;
+            border-radius: 5px;
+            padding: 10px;
+
+        }
+        input[type="Reset"]:hover{
+            background-color: rgb(0, 255, 42);
+            color: white;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        @media  (max-width:940px){
+            #kk{
+                margin-top: 4000px;       
+        }
+        .form-container{
+            width: 100%;
+            height: 650px;
+            box-shadow: 0px 30px 10px 0px rgb(60, 57, 57);
+            background-color: blue;
+        }
+
+        }
+        .lk{
+            width: 100%;
+            height: 40vh;
+            background:linear-gradient(yellow , blue, pink);
+        }
+        .mk{
+            width: 100%;
+            align-items: center;
+            text-align: center;
+        }
+        .mk h1{
+            text-align: center;
+            padding-top: 80px;
+            font-size: 50px;
+            font-weight: 500;
+        }
+        .mk p{
+            text-align: center;
+            align-items: center;
+            padding-top: 10px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        #lk1{
+            width: 100%;
+            height: 100%;
+            margin-top: 5px;
+            /* background-color: antiquewhite; */
+            /* display: flex; */
+
+        }
+        .mk1{
+            width: 335px;
+            height: 200px;
+            display: inline-block;
+            margin-left: 10px;
+            /* float: left; */
+            margin-top: 5px;
+            margin: 15px;
+            box-shadow: 0px 20px 30px 0px black;
+            border-radius: 10px;
+            
+        }
+        img{
+            
+            width: 335px;
+            height: 200px;
+            border-radius: 10px;
+        }
+        .jl{
+            width: 100%;
+            height: 80%;
+            margin-top: 1px;
+
+        }
+        #jl{
+            width: 100%;
+            height: 80%;
+        }
+        @media (min-width:400px)  and (max-width:940px){
+            .jl{
+                width: 408px;
+                height: 258px;
+            }
+        }
+        @media (min-width:400px)  and (max-width:940px) {
+            img{
+                border-radius: 5px;
+                width: 357px;
+                height: 190px;  
+            }
+            .mk1{
+                width: 100%;
+                flex-direction: column;
+                margin-left: -1px;
+
+            }
+            
+        }
+        @media (max-width:940px) {
+            nav .menu-btn i{
+                display: block;
+            }
+            #click:checked ~.menu-btn i:before{
+                content: "\f00d";
+            }
+
+            nav ul{
+                position: fixed;
+                top: 80px;
+                left:-100%;
+                background-color: #111;
+                height: 100%;
+                width: 100%;
+                display: block;
+                text-align: center;
+                transition: all 0.3s ease;
+                
+            }
+        #click:checked ~ ul{
+                left: 0%;
+            }
+         nav ul li{
+                margin-top: 50px 0;
+            }
+            
+           
+          }
+        nav ul li a{
+            font-size: 30px;
+            display: block;
+
+          }
+        
+        
+        
+        /* Base styles */
+        .footer {
+           background-color: #333;
+           color: #fff;
+           padding: 20px;
+           text-align: center;
+    
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+    flex: 1;
+    padding: 10px;
+    min-width: 200px;
+        }
+
+       .footer-section h3 {
+          font-size: 1.2em;
+          margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+       .footer-section ul li {
+           margin: 5px 0;
+        }
+
+        .footer-section a {
+           color: #fff;
+           text-decoration: none;
+        }
+
+        .footer-section a:hover {
+           text-decoration: underline;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+
+       /* Responsive Styles */
+        @media (max-width: 768px) {
+        .footer{
+           margin-top: auto;
+        }
+        .footer-container {
+           flex-direction: column;
+           align-items: center;
+        
+       }
+
+       .footer-section {
+           text-align: center;
+           margin-bottom: 20px;
+        }
+
+        .footer-bottom {
+          font-size: 1em;
+        }
+        }
+
+       @media (max-width: 480px) {
+         .footer-container {
+           padding: 10px;
+    }
+
+    .footer-section h3 {
+        font-size: 1.1em;
+    }
+    }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Gallery</div>
+        <input type="checkbox" id="click" >
+        <label for="click" class="menu-btn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="https://www.amazon.com">Home</a></li>
+            <li><a href="https://www.youtube.com">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">contact</a></li>
+            <li><a href="">project</a></li>
+            <li><a href="">Languages</a></li>
+        </ul>
+    </nav>
+    <div class="lk">
+        <div class="mk">
+           <h1>Gallery</h1>
+           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum delectus</p>
+        </div>
+    </div>
+    <div id="lk1">
+        <div class="mk1">
+            <img class="pl" src="23.jpeg" alt="">
+        </div>
+
+        <div class="mk1">
+            <img class="pl" src="20.jpeg" alt="">
+        </div>
+
+        <div class="mk1">
+            <img class="pl" src="19.webp" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="21.jpeg" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="25.webp" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="23.jpeg" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="1.jpg" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="2.jpg" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="3.jpeg" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="4.jpeg" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="5.jpg" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="6.avif" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="7.avif" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="8.jpeg" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="9.jpeg" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="10.jpeg" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="13.jpeg" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="12.webp" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="24.jpeg" alt="">
+        </div>
+        <div class="mk1">
+            <img id="pl" src="18.webp" alt="">
+        </div>
+    </div>
+       <div id="kk">
+       <div class="form-container">
+        <form action="#">
+            <div>Name:<input type="text" name="myname"></div>
+            <div>Email:<input type="Email" name="myEmail"></div>
+            <div>password:<input type="password" name="password"></div>
+            <div>you are aligible:<br><textarea name="" rows="10" cols="30"></textarea></div>
+            <div><input type="submit" value="submit"></div>
+            <div><input type="Reset" value="Reset"></div>
+        </form>
+       </div>
+    </div>
+       <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are a leading company in our industry.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Address</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://Facebook.com">Facebook</a></li>
+                    <li><a href="https://Twitter.com">Twitter</a></li>
+                    <li><a href="https://Instagram.com">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+    </footer>  
+</body>
+</html>
